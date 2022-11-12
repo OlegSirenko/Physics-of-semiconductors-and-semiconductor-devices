@@ -18,6 +18,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    QString file_name = "///";
+
 
 private slots:
     void on_pushButton_clicked();

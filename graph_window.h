@@ -18,12 +18,13 @@ class Graph_window : public QDialog
 public:
     explicit Graph_window(QWidget *parent = nullptr);
     ~Graph_window();
+    Ui::Graph_window *ui;
+    QString text;
 
 private slots:
     void on_pushButton_clicked();
+    void onCompute(const QString result);
 
-private:
-    Ui::Graph_window *ui;
 };
 
 #endif // GRAPH_WINDOW_H
