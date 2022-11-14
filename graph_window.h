@@ -19,12 +19,15 @@ public:
     explicit Graph_window(QWidget *parent = nullptr);
     ~Graph_window();
     Ui::Graph_window *ui;
-    QString text;
+    int text = 0;
+    QString title;
 
 private slots:
     void on_pushButton_clicked();
     void onCompute(const QString result);
-
+    void on_pushButton_2_clicked();
+private:
+    QChartView chartView;
 };
 
 #endif // GRAPH_WINDOW_H

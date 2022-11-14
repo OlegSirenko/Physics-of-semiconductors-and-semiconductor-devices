@@ -18,18 +18,24 @@ MainWindow::MainWindow(QWidget *parent) // объявление родитель
 
     movie->start(); // начинаем анимацию
     ui->pushButton->setVisible(true);
+
+    QPixmap pixmap(":/logo.jpg");
+    ui->label_7->setPixmap(pixmap);
+    ui->label_7->setMask(pixmap.mask());
+
 }
+
 
 MainWindow::~MainWindow() // деструктор
 {
     delete ui; //  удаляем user_interface из оперативной памяти
 }
 
+
 void MainWindow::on_pushButton_clicked() // метод при нажатии на кнопку "Нарисовать график"
 {
-    QString window_title;
     Graph_window graph;  // объявляем объект класса Graph_window
-    graph.setWindowTitle(window_title);
+    graph.setWindowTitle("Просмотр графика");
     //graph.setModal(true); // объявляем своство диалогового окна с графиком, как модальное
     /// P.s. модальное окно -- окно блокирующее родительское, т.е. MainWindow будет неактивно пока мы не закроем окно с графиком
     graph.exec(); // отображаем окно с графиком

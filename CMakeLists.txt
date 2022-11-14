@@ -23,9 +23,6 @@ set(PROJECT_SOURCES
         graph_window.h
         graph_window.ui
         gifs.qrc
-        markers.qrc
-        utilities.cpp
-        utilities.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
